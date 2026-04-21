@@ -1,0 +1,96 @@
+<!-- ─────────────────────────────────────────────
+     [1] HERO
+───────────────────────────────────────────── -->
+<section id="hero" class="relative min-h-screen flex items-center bg-elio-dark overflow-hidden pt-14">
+  <div class="hero-glow absolute inset-0 pointer-events-none"></div>
+
+  <!-- Circuit-dot background pattern -->
+  <div class="absolute inset-0 pointer-events-none opacity-10"
+       style="background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 w-full">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: copy -->
+      <div class="fade-in">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-elio-blue/10 border border-elio-blue/30 text-elio-blue text-xs font-semibold mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-elio-emerald animate-pulse"></span>
+          Listed on Anthropic MCP Registry
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-5">
+          Build your AI.<br/>
+          <span class="text-elio-blue">Move your world.</span>
+        </h1>
+
+        <p class="text-lg text-slate-400 mb-8 max-w-md leading-relaxed">
+          ELIO is the open hardware platform that connects
+          any AI to any motor — from a classroom desk to a 20&nbsp;km field.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-3 mb-10">
+          <a href="https://tindie.com/stores/mobilian/" target="_blank"
+             class="flex items-center gap-2 px-6 py-3 bg-elio-blue hover:bg-blue-600 rounded-xl font-semibold transition-colors shadow-lg shadow-blue-900/30">
+            Buy on Tindie
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="https://github.com/johnsnow-nam" target="_blank"
+             class="flex items-center gap-2 px-6 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold transition-colors">
+            View on GitHub
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!-- Spec badges -->
+        <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-400">
+          <span class="px-3 py-1.5 bg-white/5 rounded-full border border-white/10">● Nordic nRF52</span>
+          <span class="px-3 py-1.5 bg-white/5 rounded-full border border-white/10">● BLE + LoRa</span>
+          <span class="px-3 py-1.5 bg-white/5 rounded-full border border-white/10">● AI-Ready</span>
+          <span class="px-3 py-1.5 bg-white/5 rounded-full border border-white/10">● Open Platform</span>
+        </div>
+      </div>
+
+      <!-- Right: board mockup -->
+      <div class="fade-in flex justify-center">
+        <div class="board-mockup rounded-2xl w-full max-w-sm aspect-square flex flex-col items-center justify-center p-8 relative rotate-3">
+          <svg viewBox="0 0 220 220" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="20" width="180" height="180" rx="12" fill="#0d1e3a" stroke="#1D4ED8" stroke-width="1.5"/>
+            <rect x="75" y="75" width="70" height="70" rx="4" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+            <text x="110" y="108" font-family="JetBrains Mono, monospace" font-size="8" fill="#60a5fa" text-anchor="middle">nRF52</text>
+            <text x="110" y="120" font-family="JetBrains Mono, monospace" font-size="6" fill="#475569" text-anchor="middle">Nordic</text>
+            <rect x="25" y="90" width="14" height="8" rx="2" fill="#1D4ED8" opacity="0.8"/>
+            <rect x="25" y="104" width="14" height="8" rx="2" fill="#1D4ED8" opacity="0.8"/>
+            <text x="32" y="88" font-family="JetBrains Mono, monospace" font-size="5" fill="#64748b" text-anchor="middle">M1</text>
+            <text x="32" y="102" font-family="JetBrains Mono, monospace" font-size="5" fill="#64748b" text-anchor="middle">M2</text>
+            <rect x="181" y="90" width="14" height="8" rx="2" fill="#10B981" opacity="0.8"/>
+            <rect x="181" y="104" width="14" height="8" rx="2" fill="#10B981" opacity="0.8"/>
+            <text x="188" y="88" font-family="JetBrains Mono, monospace" font-size="5" fill="#64748b" text-anchor="middle">S1</text>
+            <text x="188" y="102" font-family="JetBrains Mono, monospace" font-size="5" fill="#64748b" text-anchor="middle">S2</text>
+            <rect x="80"  y="25" width="8" height="12" rx="2" fill="#F59E0B" opacity="0.8"/>
+            <rect x="94"  y="25" width="8" height="12" rx="2" fill="#F59E0B" opacity="0.8"/>
+            <rect x="108" y="25" width="8" height="12" rx="2" fill="#F59E0B" opacity="0.8"/>
+            <rect x="122" y="25" width="8" height="12" rx="2" fill="#F59E0B" opacity="0.8"/>
+            <rect x="96" y="183" width="28" height="12" rx="3" fill="#334155" stroke="#475569" stroke-width="1"/>
+            <text x="110" y="192" font-family="JetBrains Mono, monospace" font-size="6" fill="#64748b" text-anchor="middle">USB</text>
+            <path d="M160 30 L185 30 L185 55" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+            <text x="178" y="28" font-family="JetBrains Mono, monospace" font-size="5" fill="#3b82f6">BLE</text>
+            <circle cx="44" cy="160" r="4" fill="#10B981" opacity="0.8"/>
+            <circle cx="58" cy="160" r="4" fill="#1D4ED8" opacity="0.5"/>
+            <circle cx="72" cy="160" r="4" fill="#64748b" opacity="0.4"/>
+            <text x="44" y="173" font-family="JetBrains Mono, monospace" font-size="5" fill="#475569" text-anchor="middle">PWR</text>
+          </svg>
+          <div class="absolute inset-0 rounded-2xl border border-elio-blue/30 pointer-events-none"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-slate-500 text-xs animate-bounce">
+    <span>Scroll</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+  </div>
+</section>

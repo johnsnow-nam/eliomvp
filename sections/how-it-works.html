@@ -1,0 +1,74 @@
+<!-- ─────────────────────────────────────────────
+     [5] HOW IT WORKS
+───────────────────────────────────────────── -->
+<section id="how" class="bg-elio-light text-elio-dark py-24 px-4 sm:px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-elio-blue text-sm font-semibold tracking-widest uppercase mb-3">How It Works</p>
+      <h2 class="text-4xl font-extrabold">Connect in 3 Steps</h2>
+    </div>
+
+    <!-- Flow diagram -->
+    <div class="fade-in mb-16 overflow-x-auto">
+      <svg viewBox="0 0 760 120" class="w-full min-w-[560px]" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#1D4ED8"/>
+          </marker>
+        </defs>
+
+        <!-- Node 1: Your Device -->
+        <rect x="10" y="30" width="150" height="60" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+        <text x="85" y="55" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Your Device</text>
+        <text x="85" y="72" font-family="Inter,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Phone · PC · Raspberry Pi</text>
+
+        <!-- Arrow 1 + label -->
+        <line x1="162" y1="60" x2="218" y2="60" class="arrow-line flow-line" stroke="#1D4ED8" stroke-width="2"/>
+        <text x="190" y="50" font-family="Inter,sans-serif" font-size="8" fill="#1D4ED8" text-anchor="middle">BLE / USB</text>
+        <text x="190" y="78" font-family="Inter,sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">LoRa · WiFi</text>
+
+        <!-- Node 2: ELIO Board -->
+        <rect x="220" y="20" width="160" height="80" rx="10" fill="#0f172a" stroke="#1D4ED8" stroke-width="2"/>
+        <text x="300" y="52" font-family="Inter,sans-serif" font-size="13" font-weight="800" fill="white" text-anchor="middle">ELIO Board</text>
+        <text x="300" y="70" font-family="JetBrains Mono, monospace" font-size="9" fill="#3b82f6" text-anchor="middle">nRF52 MCU</text>
+        <text x="300" y="85" font-family="Inter,sans-serif" font-size="8" fill="#64748b" text-anchor="middle">BLE · LoRa · USB built-in</text>
+
+        <!-- Arrow 2 + label -->
+        <line x1="382" y1="60" x2="440" y2="60" class="arrow-line flow-line" stroke="#10B981" stroke-width="2" style="animation-delay:0.3s"/>
+        <text x="411" y="50" font-family="Inter,sans-serif" font-size="8" fill="#10B981" text-anchor="middle">PWM / GPIO</text>
+
+        <!-- Node 3: Outputs -->
+        <rect x="442" y="10" width="160" height="100" rx="10" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+        <text x="522" y="38" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">Motors &amp; Sensors</text>
+        <text x="522" y="56" font-family="Inter,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">DC Motor ×2</text>
+        <text x="522" y="70" font-family="Inter,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Servo ×2</text>
+        <text x="522" y="84" font-family="Inter,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">IO Ports ×4</text>
+        <text x="522" y="98" font-family="Inter,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Camera (ESP32-CAM)</text>
+
+        <!-- Range badge -->
+        <rect x="614" y="35" width="130" height="50" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+        <text x="679" y="57" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Up to 20 km</text>
+        <text x="679" y="73" font-family="Inter,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">via LoRa — no WiFi</text>
+      </svg>
+    </div>
+
+    <!-- 3 step cards -->
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="fade-in card-hover bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+        <div class="w-10 h-10 rounded-xl bg-elio-blue flex items-center justify-center text-white font-bold text-lg mb-4">1</div>
+        <h3 class="font-bold text-lg mb-2">Download the App or open Scratch</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Available on iOS, Android, and web browser. No driver needed on Mac.</p>
+      </div>
+      <div class="fade-in card-hover bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+        <div class="w-10 h-10 rounded-xl bg-elio-emerald flex items-center justify-center text-white font-bold text-lg mb-4">2</div>
+        <h3 class="font-bold text-lg mb-2">Power on ELIO &amp; Connect</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Press the power button. Blue LED blinks → solid when connected.</p>
+      </div>
+      <div class="fade-in card-hover bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+        <div class="w-10 h-10 rounded-xl bg-elio-amber flex items-center justify-center text-white font-bold text-lg mb-4">3</div>
+        <h3 class="font-bold text-lg mb-2">Start Coding</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Drag blocks, write Python, or say it in natural language to Claude AI.</p>
+      </div>
+    </div>
+  </div>
+</section>

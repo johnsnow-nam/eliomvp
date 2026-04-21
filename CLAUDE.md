@@ -10,16 +10,37 @@ The full spec is in `ELIO_MVP_Site_Spec.md`. Read it before starting any impleme
 
 ## Build Approach
 
-**Phase 1 (current):** Single HTML file with Tailwind CSS CDN — fastest path to GitHub Pages deployment.
+**Phase 1 (current):** Static HTML split into partials + Tailwind CSS CDN — ships as-is to GitHub Pages.
 
 **Phase 2:** Migrate to Next.js 14 (App Router) + TypeScript + Tailwind CSS v3.
 
-### Phase 1 Commands (single HTML)
-No build step — open `index.html` directly in a browser or use a local server:
+### Phase 1 Commands (modular static HTML)
+No build step. `index.html` is a thin shell that loads each section from `sections/*.html` via `scripts/include.js` (fetch-based).
+
+Because the loader uses `fetch()`, you MUST serve over HTTP — opening `index.html` directly via `file://` will hit CORS and render nothing:
 ```bash
-npx serve .           # or
+npx serve .                 # or
 python3 -m http.server 8080
 ```
+
+### Phase 1 File Structure
+```
+index.html              # Shell: <head> + <div data-include="sections/*.html">
+styles/
+  main.css              # All custom CSS (hero glow, video player, fade-in, etc.)
+scripts/
+  tailwind-config.js    # tailwind.config extension (colors, fonts)
+  include.js            # Injects every [data-include] partial, then fires `partials:loaded`
+  main.js               # Video player, tab switcher, fade-in IntersectionObserver
+sections/
+  navbar.html           what-is-elio.html    how-it-works.html   musa.html
+  hero.html             ai-native.html       code-your-way.html  neoflash.html
+                        use-cases-video.html                     get-started.html
+                        footer.html
+assets/                 # All images, videos, PDFs (source of truth)
+```
+
+To add a new section: create `sections/<name>.html`, then add `<div data-include="sections/<name>.html"></div>` in `index.html` at the desired position. Any JS that runs on the DOM must wait for the `partials:loaded` event (see `scripts/main.js`).
 
 ### Phase 2 Commands (Next.js)
 ```bash
@@ -93,11 +114,22 @@ Tindie store URL and Instructables URL are TBD — use `#` as placeholder.
 
 ## Assets Status
 
-Missing (use placeholders until provided by designer):
-- `elio-board-hero.png` — board photo with transparent background
+All media lives in `assets/` (single source of truth). Key files currently wired in:
+
+| File | Used in |
+|---|---|
+| `elio-board.png` | What is ELIO section (product photo) |
+| `elio-showcase.mp4` | Use Cases video section |
+| `ble-dongle.png` | Code Your Way — BLE Dongle callout |
+| `musa-board.png` | MUSA section |
+| `neoflash-banner.png`, `neoflash-diagram.png` | neoFlash × ELIO section |
+| `elio-manual.pdf` | Footer → Download Manual |
+
+Additional assets staged for future use: `elio-board-cover.png`, `elio-board.jpeg`, `elio-ecosystem-cards.png`, `elio-with-dongle.png`, `elio-works.mp4`, `musa-product.png`, `nrf52840-dongle.png`, `elio-intro.mp4`.
+
+Still missing (placeholder until designer provides):
 - `og-image.png` — 1200×630 social sharing image
 - `elio-logo.svg`
-- Use case illustration images ×5
 
 ## SEO Metadata
 

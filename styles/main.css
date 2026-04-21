@@ -1,0 +1,80 @@
+html { scroll-behavior: smooth; }
+
+/* Navbar blur */
+#navbar { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+
+/* Hero glow */
+.hero-glow {
+  background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(29,78,216,0.25) 0%, transparent 70%);
+}
+
+/* Board mockup */
+.board-mockup {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(29,78,216,0.4);
+  box-shadow: 0 0 60px rgba(29,78,216,0.3), 0 0 120px rgba(29,78,216,0.1);
+}
+
+/* Diagram arrow */
+.arrow-line {
+  stroke: #1D4ED8;
+  stroke-width: 2;
+  marker-end: url(#arrowhead);
+}
+
+/* Code block */
+.code-block { tab-size: 2; }
+
+/* Keyword colors for inline syntax highlighting */
+.kw  { color: #c084fc; }   /* purple - keywords */
+.fn  { color: #60a5fa; }   /* blue - functions */
+.str { color: #34d399; }   /* green - strings */
+.cm  { color: #64748b; }   /* gray - comments */
+.num { color: #fb923c; }   /* orange - numbers */
+.at  { color: #facc15; }   /* yellow - attributes */
+
+/* Tab active indicator */
+.tab-btn.active {
+  background-color: #1D4ED8;
+  color: #fff;
+}
+
+/* Card hover */
+.card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.15); }
+
+/* Scroll fade-in */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Video player */
+.video-wrap { position: relative; background: #0f172a; border-radius: 16px; overflow: hidden; }
+.video-wrap video { display: block; width: 100%; }
+.video-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(15,23,42,0.45);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.video-overlay:hover { background: rgba(15,23,42,0.3); }
+.video-overlay.hidden { display: none; }
+.play-btn {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(29,78,216,0.9);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 12px rgba(29,78,216,0.2);
+  transition: transform 0.15s, background 0.15s;
+}
+.video-overlay:hover .play-btn { transform: scale(1.08); background: #1D4ED8; }
+
+/* Diagram animation */
+@keyframes flow {
+  0%   { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+.flow-line {
+  stroke-dasharray: 8 4;
+  stroke-dashoffset: 100;
+  animation: flow 2s linear infinite;
+}
