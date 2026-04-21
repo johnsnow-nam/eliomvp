@@ -332,7 +332,36 @@
 
 
 <!-- ─────────────────────────────────────────────
-     [3] HOW IT WORKS
+     [3] USE CASES — VIDEO
+───────────────────────────────────────────── -->
+<section id="use-cases" class="bg-elio-dark py-24 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10 fade-in">
+      <p class="text-elio-blue text-sm font-semibold tracking-widest uppercase mb-3">Use Cases</p>
+      <h2 class="text-4xl font-extrabold">What Will You Build?</h2>
+    </div>
+    <div class="fade-in">
+      <div class="video-wrap shadow-2xl" style="border-radius:20px;">
+        <video id="vid-showcase" preload="metadata" playsinline
+               style="aspect-ratio:16/9; background:#0f172a;">
+          <source src="assets/elio-showcase.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay" id="overlay-showcase" onclick="playVideo('showcase')">
+          <div class="text-center">
+            <div class="play-btn mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <p class="text-white font-semibold text-sm drop-shadow">See what makers have built with ELIO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────────
+     [4] HOW IT WORKS
 ───────────────────────────────────────────── -->
 <section id="how" class="bg-elio-light text-elio-dark py-24 px-4 sm:px-6">
   <div class="max-w-5xl mx-auto">
@@ -688,33 +717,6 @@ pip install buddy-mcp
 </section>
 
 
-<!-- ─────────────────────────────────────────────
-     [6] USE CASES — VIDEO
-───────────────────────────────────────────── -->
-<section id="use-cases" class="bg-elio-dark py-24 px-4 sm:px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-10 fade-in">
-      <p class="text-elio-blue text-sm font-semibold tracking-widest uppercase mb-3">Use Cases</p>
-      <h2 class="text-4xl font-extrabold">What Will You Build?</h2>
-    </div>
-    <div class="fade-in">
-      <div class="video-wrap shadow-2xl" style="border-radius:20px;">
-        <video id="vid-showcase" preload="metadata" playsinline
-               style="aspect-ratio:16/9; background:#0f172a;">
-          <source src="assets/elio-showcase.mp4" type="video/mp4" />
-        </video>
-        <div class="video-overlay" id="overlay-showcase" onclick="playVideo('showcase')">
-          <div class="text-center">
-            <div class="play-btn mx-auto mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-            <p class="text-white font-semibold text-sm drop-shadow">See what makers have built with ELIO</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ─────────────────────────────────────────────
